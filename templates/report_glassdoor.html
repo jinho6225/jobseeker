@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Job Search from glassdoor</title>
+    <style>
+      section {
+        display: grid;
+        gap: 20px;
+        grid-template-columns: repeat(4, 1fr);
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1><a href="/">Search</a> Result from glassdoor</h1>
+    <h3>Found {{resultNum}} result for: {{word}} Job</h3>
+    <h4>posted date: {{posted_date}} ago</h4>
+    <a href="/export_glassdoor?word={{word}}&posted_date={{posted_date}}"
+      >Export to CSV</a
+    >
+    <section>
+      <h4>Title</h4>
+      <h4>Company</h4>
+      <h4>Location</h4>
+      <h4>Link</h4>
+      {% for job in jobs %}
+      <span>{{job.title}}</span>
+      <span>{{job.company}}</span>
+      <span>{{job.location}}</span>
+      <a href="{{job.link}}" target="blank">Job Apply Link</a>
+      {% endfor %}
+    </section>
+  </body>
+</html>

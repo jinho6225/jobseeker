@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Job Search</title>
+  </head>
+
+  <body>
+    <div>
+      <h1>Job Search from Indeed</h1>
+      <form action="/report_indeed" method="get">
+        <label for="job_search">job_search:</label>
+        <input placeholder="what job do you want?" required name="word" />
+        <label for="posted_date">posted_date:</label>
+        <select id="posted_date" name="posted_date">
+          <option value="one_day">one_day</option>
+          <option value="one_week">one_week</option>
+        </select>
+        <button>Search</button>
+      </form>
+    </div>
+    <div>
+      <h1>Job Search from glassdoor</h1>
+      <form action="/report_glassdoor" method="get">
+        <label for="job_search">job_search:</label>
+        <input placeholder="what job do you want?" required name="search" />
+        <label for="posted_date">posted_date:</label>
+        <select id="posted_date" name="posted_date">
+          <option value="one_day">one_day</option>
+          <option value="one_week">one_week</option>
+        </select>
+        <button>Search</button>
+      </form>
+    </div>
+  </body>
+</html>
