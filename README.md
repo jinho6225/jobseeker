@@ -2,8 +2,7 @@
 
 ## Description
 
-A fullstack application where teachers can set grades for students.
-without signIn, it cannot add and modify it. Mobile responsive design
+It's scrapper for job posting from Indeed & glassdoor
 
 ## Technologies Used
 
